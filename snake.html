@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/snake.css">
+  
+  <script src="js/functions.js" defer></script>
+  <script src="js/snake.js" defer></script>
+
+  <title>Snake Game</title>
+</head>
+<body>
+  <main class="container p-2">
+    <div id="minigame">
+      <div class="border border-vertical"></div>
+      <div class="d-flex">
+        <div class="border border-horizontal data">
+          <span>Jogo:</span>
+          <h1 id="nome_jogo"></h1>
+        </div>
+        <div id="field"></div>
+        <div class="border border-horizontal data">
+          <h2>Points</h2>
+          <span id="points">0</span>
+        </div>
+      </div>
+      <div class="border border-vertical"></div>
+      <div class="d-flex">
+        <div>
+          <div class="button" id="btn_top"></div>
+          <div class="d-flex">
+            <div class="button" id="btn_left"></div>
+            <div class="button bg-game"></div>
+            <div class="button" id="btn_right"></div>
+          </div>
+          <div class="button" id="btn_botton"></div>
+        </div>
+        <div class="d-flex">
+          <div class="button button-option" id="btn_start" 
+            title="Atalho: tecla [Barra de espaço]">Start</div>
+          <div class="button button-option" id="btn_end"
+            title="Atalho: tecla [Pause]">End</div>
+          <a class="button button-option" id="btn_menu" href="index.html" 
+            title="Atalho: tecla [Home]">Menu</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

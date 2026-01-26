@@ -1,0 +1,112 @@
+:root{
+  --bg-default: #4f4f4f;
+  --bg-game: #212121;
+  --bg-button: #fdfa29;
+  --bg-button-option: #0076c5;
+  --bg-white: #f7f7f7;
+}
+*{
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--bg-default);
+  padding: .5rem;
+}
+.data{
+  color: var(--bg-white);
+  font-weight: bolder;
+  text-align: center;
+}
+.d-flex{
+  display: flex;
+}
+.d-flex > *{
+  width: 100%;
+}
+.bg-game{
+  background-color: var(--bg-game) !important;
+}
+.button{
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--bg-button);
+  margin: auto;
+  text-decoration: none;
+}
+.button-option{
+  background-color: var(--bg-button-option);
+  padding-top: .8rem;
+  text-align: center;
+  font-weight: bolder;
+  color: var(--bg-white);
+}
+.border{
+  background-color: var(--bg-game);
+  position: relative;
+  z-index: 2;
+}
+.border-vertical{
+  width: 200px;
+  height: 50px;
+  margin: auto;
+}
+.border-horizontal{
+  width: 150px;
+  height: 400px;
+}
+#minigame{
+  width: 500px;
+  border-radius: 1rem;
+  padding: 1rem 0;
+  margin: auto;
+  background-color: var(--bg-game);
+}
+#field{
+  background-color: var(--bg-white);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  width: 220px;
+  height: 450px;
+  border-radius: 0.2rem;
+}
+#field > a{
+  display: block;
+  color: var(--bg-default);
+  padding: .5rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--bg-default);
+}
+#field > a:hover{
+  background-color: var(--bg-button-option);
+  color: var(--bg-game);
+}
+
+.piece {
+     background-image: url('../imagens/Player.png');
+  width: 80px !important;
+  height: 100px !important;
+  top: auto;
+  left: auto;
+  display: block !important;       /* Proporção de um carro */
+  position: absolute !important;
+  background-size: 100% 100%;
+  background-size: contain;     /* Faz a imagem se ajustar ao tamanho da div */
+  background-repeat: no-repeat;  /* Impede que a imagem se repita */
+  background-position: center;   /* Centraliza o desenho */
+  background-color: transparent !important; /* Remove cores de fundo antigas */
+
+}
+
+/* Estilo para obstáculos (carros inimigos) */
+.obstacle {
+   background-image: url('../imagens/Player.png');
+  
+}

@@ -1,0 +1,5 @@
+#head {
+ background-image: url('../imagens/Player.png');
+  transition: left 0.1s;
+  z-index: 999;
+}
