@@ -1,8 +1,8 @@
 :root{
-  --bg-default: #4f4f4f;
-  --bg-game: #212121;
+  --bg-default: #515152;
+  --bg-game: #b850d5;
   --bg-button: #fdfa29;
-  --bg-button-option: #0076c5;
+  --bg-button-option: #06b5b8;
   --bg-white: #f7f7f7;
 }
 *{

@@ -12,7 +12,7 @@ btn_start.onclick = startGame;
 btn_end.onclick = endGame;
 
 document.body.onkeydown = function (e) {
-  if(e.which == 37){ // Teclas direcionais
+  if(e.which == 37){ // Teclas esquerdo
     movePlayer(0);
   } else if(e.which == 39){ // tecla direito
      movePlayer(laneWidth);
@@ -27,22 +27,20 @@ function startGame(){
   if(timer != null) endGame();
   field.innerHTML = ""; // Limpa a pista
   obstacles = [];
-  time = 100; // Velocidade inicial (mais baixo = mais rápido)
+  time = 100; // Velocidade inicial
    if (points) points.innerText = "0"; 
-  // Cria o jogador (carro)
   player = newPiece(0, 320); 
-  player.style.transition = "left 0.1s"; // Efeito suave de troca de pista
+  player.style.transition = "left 0.1s"; 
   
   timer = setInterval(loop, time);
 }
-// (Re)Inicia o timer do jogo e chama a função start()
 
 function movePlayer(x) {
   if(player) player.style.left = x + "px";
 }
 
 function loop() {
-    spawnObstacle();   // Esta linha deve existir aqui!
+  spawnObstacle();   
   moveObstacles();
   // 1. Criar novos obstáculos aleatoriamente
   if (Math.random() > 0.9) {
@@ -83,7 +81,6 @@ function endGame(){
   return true;
 }
 
-// Suas funções auxiliares permanecem iguais ou similares
 function newPiece(left, top){
     let piece = document.createElement("div");
     piece.className = "piece";
@@ -103,8 +100,6 @@ function colision(objA, objB) {
   let bLeft = getPosition(objB, "left");
   let bTop = getPosition(objB, "top");
 
-  // Se estiverem na mesma pista E a distância vertical for menor que a altura do carro
-  // Ajustamos para 100 ou 110 (a altura que você definiu no CSS)
   return (aLeft == bLeft && Math.abs(aTop - bTop) < 80); 
 }
 
